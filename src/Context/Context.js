@@ -12,7 +12,10 @@ class ProductProvider extends Component {
         detailProduct:detailProduct,
         cart:[],
         model:false,
-        modelProduct:""
+        modelProduct:"",
+        cartSubPrice:0,
+        cartTax:0,
+        cartTotalPrice:0
     }
 
     componentDidMount(){
@@ -36,6 +39,22 @@ class ProductProvider extends Component {
     closeModel=()=>{
         this.setState(()=>{return{model:false}})
     }
+
+    increment =(id)=>{
+        console.log(`Hello from increment ${id}`);
+    }
+    decrement= (id) =>{
+        console.log(`hello from decrement ${id}`);
+    }
+
+    removeItem= (id) =>{
+        console.log(`Hello from removeCart ${id}`);
+    }
+
+    clearCart = () =>{
+        console.log('Cart has been cleared');
+    }
+
 
     addToCart= (id) =>{
         const index=this.state.products.indexOf(this.getItem(id));
@@ -71,7 +90,11 @@ class ProductProvider extends Component {
                 handleDetails:this.handleDetails,
                 addToCart:this.addToCart,
                 openModel:this.openModel,
-                closeModel:this.closeModel
+                closeModel:this.closeModel,
+                increment:this.increment,
+                decrement:this.decrement,
+                removeItem:this.removeItem,
+                clearCart:this.clearCart
             }}>
                 {this.props.children}
             </ProductContext.Provider>

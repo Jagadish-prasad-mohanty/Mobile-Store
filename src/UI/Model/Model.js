@@ -20,7 +20,7 @@ export default class Model extends Component {
             <ModelWrapper onClick={()=>closeModel()}>
                 <div className="container">
                     <div className="row">
-                            <div id="model" className="col-8 mx-auto col-md-6 col-l-4 p-5 text-capitalize" 
+                            <div id="model" className="col-8 mx-auto col-md-6 col-lg-4 p-5 text-center text-capitalize" 
                             onClick={(event)=>event.stopPropagation()}>
                                 <h2>Item Added to cart</h2>
                                 <img className="img-fluid" src={img} alt={title}/>

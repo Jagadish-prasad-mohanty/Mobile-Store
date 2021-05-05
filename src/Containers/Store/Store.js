@@ -4,7 +4,7 @@ import {Switch,Link,Route} from 'react-router-dom';
 import logo from '../../logo.svg';
 import Products from '../../Components/Products/Products';
 import Navbar from '../../UI/Navbar/Navbar';
-import Cart from '../../Components/Cart/Cart';
+import Cart from '../Cart/Cart';
 import Default from '../../Components/Default/Default';
 import Details from '../../Components/Details/Details';
 import Model from '../../UI/Model/Model';
